@@ -1,0 +1,44 @@
+:root {
+	--primary: #495e57;
+	--accent: #f4ce14;
+	--grey: #edefee;
+	--dark-grey: #333333;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Karla, sans-serif;
+}
+
+/* ##### NAVBAR STYLES ##### */
+.navbar {
+	max-width: 70rem;
+	margin: 0 auto;
+	padding: 1.5rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#nav-logo {
+	max-width: 16rem;
+	height: auto;
+}
+
+.nav-links {
+	display: flex;
+	list-style-type: none;
+	gap: 1.8rem;
+}
+
+.nav-link {
+	text-decoration: none;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--primary);
+}
