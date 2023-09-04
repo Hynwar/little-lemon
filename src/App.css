@@ -1,5 +1,6 @@
 :root {
 	--primary: #495e57;
+	--secondary: #ee9972;
 	--accent: #f4ce14;
 	--grey: #edefee;
 	--dark-grey: #333333;
@@ -9,7 +10,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 body {
@@ -26,12 +27,7 @@ h4 {
 /* ##### NAVBAR STYLES ##### */
 
 .navbar {
-	max-width: 70rem;
-	margin: 0 auto;
-	padding: 1.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	padding: 1.5rem 2rem;
 }
 
 #nav-logo {
@@ -54,18 +50,38 @@ h4 {
 	font-size: 1.25rem;
 	font-weight: 700;
 	color: var(--primary);
+	transition: 0.1s;
+	padding: 0.5rem 0.75rem;
+}
+
+.nav-link:hover {
+	color: var(--dark-grey);
+	background-color: var(--accent);
+	border-radius: 10px;
+}
+
+.nav-link:active {
+	color: var(--grey);
+	background-color: var(--dark-grey);
 }
 
 /* ##### HERO STYLES ##### */
 #hero-section {
 	background-color: var(--primary);
-	padding: 3.75rem;
+	padding: 3.75rem 2rem;
+}
+
+.container {
+	max-width: 70rem;
 	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
 }
 
 .hero-content {
-	max-width: 27rem;
+	max-width: 25rem;
 	margin-right: 5rem;
+	justify-self: flex-start;
 }
 
 h1 {
@@ -113,7 +129,9 @@ h3 {
 }
 
 .hero-img {
-	max-width: 30rem;
-	height: auto;
+	width: 100%;
+	max-width: 32rem;
+	object-fit: cover;
 	border-radius: 1.25rem;
+	margin-bottom: -10rem;
 }
