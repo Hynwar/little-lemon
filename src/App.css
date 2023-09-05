@@ -312,3 +312,51 @@ h5 {
 	line-height: 1.8rem;
 	max-width: 25rem;
 }
+
+/* ##### ABOUT STYLES ##### */
+.footer {
+	background-color: var(--dark-grey);
+	color: #999;
+	padding: 4rem 2rem 2rem;
+}
+
+.copyright {
+	font-size: 0.75rem;
+	margin-top: 5rem;
+}
+
+.footer h5 {
+	color: var(--grey);
+	margin-bottom: 0.75rem;
+}
+
+.footer-links {
+	list-style: none;
+}
+
+.footer-link,
+.contact-text {
+	text-decoration: none;
+	color: #999;
+	line-height: 1.75rem;
+	transition: 0.1s;
+}
+
+.footer-link:hover,
+.contact-text:hover {
+	color: #fff;
+}
+
+.contact-icon {
+	margin-right: 0.5rem;
+}
+
+.social-icons {
+	display: flex;
+	gap: 1rem;
+}
+
+.social-icon {
+	height: 2rem;
+	color: #fff;
+}
