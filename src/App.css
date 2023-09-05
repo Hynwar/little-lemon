@@ -287,3 +287,28 @@ h5 {
 .avatar {
 	max-width: 5rem;
 }
+
+/* ##### ABOUT STYLES ##### */
+#about-section {
+	padding: 8.75rem 2rem;
+}
+
+#about-section .container {
+	gap: 6rem;
+}
+
+#about-section h1 {
+	color: var(--primary);
+}
+
+#about-section h3 {
+	color: var(--secondary);
+}
+
+.about-description {
+	color: #808e89;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	max-width: 25rem;
+}
