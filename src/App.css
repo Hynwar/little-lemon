@@ -251,7 +251,7 @@ h4 {
 }
 
 .review-card {
-	background-color: var(--grey);
+	background-color: #fff;
 	border-radius: 1.25rem;
 	margin-top: 3.5rem;
 	padding: 1.8rem;
@@ -313,7 +313,7 @@ h5 {
 	max-width: 25rem;
 }
 
-/* ##### ABOUT STYLES ##### */
+/* ##### FOOTER STYLES ##### */
 .footer {
 	background-color: var(--dark-grey);
 	color: #999;
@@ -337,6 +337,7 @@ h5 {
 .footer-link,
 .contact-text {
 	text-decoration: none;
+	cursor: pointer;
 	color: #999;
 	line-height: 1.75rem;
 	transition: 0.1s;

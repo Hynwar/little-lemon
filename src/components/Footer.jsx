@@ -1,4 +1,7 @@
 import logo from '../assets/footer-logo.png';
+
+import { Link } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faSquareFacebook,
 	faSquareInstagram,
@@ -10,7 +13,6 @@ import {
 	faLocationDot,
 	faPhone,
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Footer() {
 	return (
@@ -24,19 +26,31 @@ function Footer() {
 					<h5>Navigation</h5>
 					<ul className='footer-links'>
 						<li>
-							<a className='footer-link' href=''>
+							<Link
+								className='footer-link'
+								offset={-100}
+								smooth={true}
+								to='hero-section'>
 								Home
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a className='footer-link' href=''>
+							<Link
+								className='footer-link'
+								offset={100}
+								smooth={true}
+								to='menu-section'>
 								Menu
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a className='footer-link' href=''>
+							<Link
+								className='footer-link'
+								offset={-60}
+								smooth={true}
+								to='about-section'>
 								About
-							</a>
+							</Link>
 						</li>
 						<li>
 							<a className='footer-link' href=''>
