@@ -6,7 +6,7 @@ const specials = [
 		image: '/src/assets/lemon dessert.png',
 		price: '4.20',
 		description:
-			'This comes straight from grandmas recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
+			"This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
 	},
 	{
 		title: 'Greek Salad',
