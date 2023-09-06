@@ -1,22 +1,20 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Menu from './components/Menu';
-import Testimonials from './components/Testimonials';
-import About from './components/About';
-import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+
+import './styles/App.css';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+import HomePage from './components/home/HomePage';
+import ReservationPage from './components/reservation/ReservationPage';
 
 function App() {
 	return (
 		<>
-			<header>
-				<Navbar />
-			</header>
+			<Header />
 			<main>
-				<Hero />
-				<Menu />
-				<Testimonials />
-				<About />
+				<Routes>
+					<Route path='/' Component={HomePage} />
+					<Route path='/reservations' Component={ReservationPage} />
+				</Routes>
 			</main>
 			<Footer />
 		</>

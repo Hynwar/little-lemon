@@ -1,4 +1,4 @@
-import stars from '../assets/Stars.png';
+import stars from '../../assets/Stars.png';
 
 function ReviewCard({ avatar, name, review }) {
 	return (

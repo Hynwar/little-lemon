@@ -1,6 +1,5 @@
-import logo from '../assets/footer-logo.png';
-
-import { Link } from 'react-scroll';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faSquareFacebook,
@@ -14,7 +13,17 @@ import {
 	faPhone,
 } from '@fortawesome/free-solid-svg-icons';
 
+import logo from '../../assets/footer-logo.png';
+
 function Footer() {
+	const location = useLocation();
+
+	const handleClick = () => {
+		if (location.pathname === '/') {
+			scroll.scrollToTop();
+		}
+	};
+
 	return (
 		<footer className='footer'>
 			<div className='container'>
@@ -26,31 +35,27 @@ function Footer() {
 					<h5>Navigation</h5>
 					<ul className='footer-links'>
 						<li>
-							<Link
-								className='footer-link'
-								offset={-100}
-								smooth={true}
-								to='hero-section'>
+							<Link className='footer-link' to='/' onClick={handleClick}>
 								Home
 							</Link>
 						</li>
 						<li>
-							<Link
+							<ScrollLink
 								className='footer-link'
 								offset={100}
 								smooth={true}
 								to='menu-section'>
 								Menu
-							</Link>
+							</ScrollLink>
 						</li>
 						<li>
-							<Link
+							<ScrollLink
 								className='footer-link'
 								offset={-60}
 								smooth={true}
 								to='about-section'>
 								About
-							</Link>
+							</ScrollLink>
 						</li>
 						<li>
 							<a className='footer-link' href=''>

@@ -1,4 +1,4 @@
-import aboutImage from '../assets/about.png';
+import aboutImage from '../../assets/about.png';
 
 function About() {
 	return (
