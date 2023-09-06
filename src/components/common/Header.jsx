@@ -2,6 +2,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/Logo.svg';
+import '../../styles/Header.css';
 
 function Navbar() {
 	return (

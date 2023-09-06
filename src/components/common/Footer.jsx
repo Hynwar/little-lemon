@@ -14,6 +14,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import logo from '../../assets/footer-logo.png';
+import '../../styles/Footer.css';
 
 function Footer() {
 	const location = useLocation();

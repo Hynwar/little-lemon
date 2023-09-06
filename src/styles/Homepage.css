@@ -1,0 +1,216 @@
+/* ##### HERO STYLES ##### */
+
+#hero-section {
+	background-color: var(--primary);
+	padding: 3.75rem 2rem;
+}
+
+.container {
+	max-width: 70rem;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+
+.hero-content {
+	max-width: 25rem;
+	margin-right: 5rem;
+	justify-self: flex-start;
+}
+
+.description-text {
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: #cacaca;
+	line-height: 2rem;
+	margin-bottom: 2rem;
+}
+
+.primary-btn {
+	padding: 0.8rem 1.2rem;
+	background-color: var(--accent);
+	border: 3px solid var(--accent);
+	border-radius: 6rem;
+	font-size: 1rem;
+	font-weight: 700;
+	transition: 0.1s;
+}
+
+.primary-btn:hover {
+	background-color: var(--primary);
+	color: var(--accent);
+}
+
+.primary-btn:active {
+	background-color: var(--primary);
+	border-color: var(--grey);
+	color: var(--grey);
+}
+
+.hero-img {
+	width: 100%;
+	max-width: 32rem;
+	object-fit: cover;
+	border-radius: 1.25rem;
+	margin-bottom: -10rem;
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ##### MENU STYLES ##### */
+
+#menu-section {
+	padding: 12rem 2rem;
+}
+
+#menu-section .primary-btn {
+	align-self: center;
+	border: none;
+}
+
+#menu-section .primary-btn:hover {
+	color: var(--grey);
+	background-color: var(--primary);
+}
+
+#menu-section .primary-btn:active {
+	color: var(--grey);
+	background-color: var(--dark-grey);
+}
+
+.menu-cards {
+	margin-top: 3.75rem;
+	gap: 1.25rem;
+}
+
+.special-card {
+	background-color: var(--grey);
+	max-width: 33.33%;
+	border-radius: 1.25rem 1.25rem 0.625rem 0.625rem;
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.special-content {
+	padding: 2rem;
+}
+
+.special-price {
+	font-size: 1rem;
+	font-weight: 800;
+	color: var(--secondary);
+}
+
+.special-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.25rem;
+}
+
+.special-description {
+	color: var(--primary);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.75rem;
+	margin-bottom: 3.5rem;
+}
+
+.special-btn {
+	background-color: var(--primary);
+	border: none;
+	border-radius: 1.25rem;
+	padding: 0.5rem 1.2rem;
+	color: var(--grey);
+	font-size: 0.8rem;
+	font-weight: 700;
+	transition: 0.1s;
+}
+
+.special-btn:hover {
+	background-color: var(--accent);
+	color: var(--dark-grey);
+}
+
+.special-btn:active {
+	background-color: var(--dark-grey);
+	color: var(--grey);
+}
+
+.special-image {
+	width: 100%;
+	max-height: 14rem;
+	border-radius: 1.25rem 1.25rem 0 0;
+}
+
+/* ##### TESTIMONIAL STYLES ##### */
+
+#testimonial-section {
+	background-color: var(--primary);
+	padding: 6rem 2rem;
+}
+
+#testimonial-section h2 {
+	color: var(--grey);
+	text-align: center;
+}
+
+.testimonials {
+	gap: 1.25rem;
+}
+
+.review-card {
+	background-color: #fff;
+	border-radius: 1.25rem;
+	margin-top: 3.5rem;
+	padding: 1.8rem;
+	width: 44%;
+}
+
+.review-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.review-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.review-text {
+	text-align: center;
+	margin-top: 1rem;
+	color: var(--primary);
+	line-height: 1.5rem;
+}
+
+.avatar {
+	max-width: 5rem;
+}
+
+/* ##### ABOUT STYLES ##### */
+
+#about-section {
+	padding: 8.75rem 2rem;
+}
+
+#about-section .container {
+	gap: 6rem;
+}
+
+#about-section h1 {
+	color: var(--primary);
+}
+
+#about-section h3 {
+	color: var(--secondary);
+}
+
+.about-description {
+	color: #808e89;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	max-width: 25rem;
+}

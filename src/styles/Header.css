@@ -1,0 +1,38 @@
+.navbar {
+	padding: 1.5rem 2rem;
+}
+
+#nav-logo {
+	max-width: 16rem;
+	height: auto;
+	margin-right: 2rem;
+	flex: 1 1 auto;
+}
+
+.nav-links {
+	display: flex;
+	list-style-type: none;
+	width: 40rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-link {
+	text-decoration: none;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--primary);
+	transition: 0.1s;
+	padding: 0.5rem 0.75rem;
+}
+
+.nav-link:hover {
+	color: var(--dark-grey);
+	background-color: var(--accent);
+	border-radius: 10px;
+}
+
+.nav-link:active {
+	color: var(--grey);
+	background-color: var(--dark-grey);
+}
