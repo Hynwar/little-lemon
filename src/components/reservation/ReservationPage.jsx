@@ -1,8 +1,29 @@
+import { useReducer } from 'react';
+
 import '../../styles/ReservationPage.css';
 import ReservationForm from './ReservationForm';
 import image from '../../assets/reservation.png';
+import { fetchAPI, submitAPI } from '../../utils/fakeAPI';
+
+function updateTimes(state, action) {
+	if (action.type === 'UPDATE_TIMES') {
+		const res = fetchAPI(new Date(action.date));
+		return res.length !== 0 ? res : state;
+	}
+	return state;
+}
+
+function initializeTimes() {
+	return fetchAPI(new Date());
+}
 
 function ReservationPage() {
+	const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+	const handleDateChange = (newDate) => {
+		dispatch({ type: 'UPDATE_TIMES', date: newDate });
+		console.log('Date changed');
+	};
+
 	return (
 		<section id='reservation-section'>
 			<div className='container'>
@@ -34,7 +55,10 @@ function ReservationPage() {
 						</li>
 					</ul>
 				</div>
-				<ReservationForm />
+				<ReservationForm
+					availableTimes={availableTimes}
+					handleDateChange={handleDateChange}
+				/>
 			</div>
 		</section>
 	);

@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import validationSchema from '../../data/validationSchema';
 import { useState } from 'react';
 
-function ReservationForm() {
+function ReservationForm({ availableTimes, handleDateChange }) {
 	const {
 		register,
 		handleSubmit,
@@ -16,6 +16,8 @@ function ReservationForm() {
 	const [inputType, setInputType] = useState('text');
 
 	const occassionValue = watch('occassion', '');
+	const dateValue = watch('date', '');
+	const timeValue = watch('time', '');
 	const fullNameValue = watch('fullName', '');
 	const emailValue = watch('email', '');
 	const phoneValue = watch('phone', '');
@@ -31,16 +33,37 @@ function ReservationForm() {
 				<input
 					className='input-field'
 					type={inputType}
-					onFocus={() => setInputType('datetime-local')}
-					{...register('date')}
+					onFocus={() => setInputType('date')}
+					onChange={handleDateChange}
+					{...register('date', {
+						onChange: (e) => {
+							handleDateChange(e.target.value);
+						},
+						onBlur: () => {
+							setInputType('text');
+						},
+					})}
 				/>
-				<label
-					className={`placeholder ${
-						inputType === 'datetime-local' ? 'floating' : ''
-					}`}>
-					Select a Date & Time
+				<label className={`placeholder ${dateValue ? 'floating' : ''}`}>
+					Select a Date
 				</label>
 				{errors.date && <span className='error'>{errors.date.message}</span>}
+			</div>
+
+			<div className='input-group'>
+				<select className='input-field' value={timeValue} {...register('time')}>
+					<option value='' hidden></option>
+					{availableTimes.map((time) => (
+						<option key={time} value={time}>
+							{time}
+						</option>
+					))}
+				</select>
+
+				<label className={`placeholder ${timeValue ? 'floating' : ''}`}>
+					Select a Time
+				</label>
+				{errors.time && <span className='error'>{errors.time.message}</span>}
 			</div>
 
 			<div className='radio-group'>

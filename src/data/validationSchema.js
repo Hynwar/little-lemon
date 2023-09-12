@@ -21,29 +21,9 @@ export const validationSchema = Yup.object().shape({
 			}
 			return value;
 		})
-		.required('Date and Time is required')
-		.min(today, 'Date cannot be today or in the past')
-		.test(
-			'is-valid-time',
-			'Time should be during open hours',
-			function (value) {
-				if (!value) return true;
-
-				const hour = value.getHours();
-				const isWeekend = currentDay === 0 || currentDay === 6;
-
-				if (
-					(isWeekend &&
-						(hour < openHoursWeekends.start || hour > openHoursWeekends.end)) ||
-					(!isWeekend &&
-						(hour < openHoursWeekdays.start || hour > openHoursWeekdays.end))
-				) {
-					return false;
-				}
-
-				return true;
-			}
-		),
+		.required('Date is required')
+		.min(today, 'Date cannot be today or in the past'),
+	time: Yup.string().required('Time is required'),
 	occassion: Yup.string().required('Occassion is required'),
 	fullName: Yup.string()
 		.matches(/^[A-Za-z -]+$/i, 'Invalid full name format')
