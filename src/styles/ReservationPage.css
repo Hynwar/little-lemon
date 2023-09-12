@@ -1,0 +1,164 @@
+#reservation-section {
+	height: 54rem;
+	position: relative;
+	padding: 0 2rem;
+}
+
+#reservation-section .container {
+	gap: 8rem;
+}
+
+#reservation-section h1 {
+	font-size: 6rem;
+	line-height: 6rem;
+}
+
+#reservation-section h4 {
+	color: white;
+	font-family: Karla, sans-serif;
+	font-size: 1.5rem;
+	font-weight: 800;
+	margin-top: 1.5rem;
+	margin-bottom: 0.75rem;
+}
+
+#reservation-section h5 {
+	color: white;
+	font-family: Karla, sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 2rem;
+	margin-bottom: 0.4rem;
+	margin-top: 14rem;
+}
+
+.reservation-info {
+	background: none;
+	padding: 5rem 0;
+	max-width: 28rem;
+}
+
+.opening-info {
+	color: white;
+	font-size: 1.25rem;
+	line-height: 2rem;
+}
+
+.background-img {
+	width: 50%;
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	position: absolute;
+	z-index: -1;
+}
+
+.policies {
+	color: white;
+	margin-left: 2rem;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+}
+
+.reservation-form {
+	padding: 5rem 0;
+	width: 100%;
+	max-width: 25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin: 0 auto;
+}
+
+.input-group {
+	position: relative;
+	width: 100%;
+}
+
+.input-field {
+	padding: 1rem;
+	font-family: inherit;
+	font-size: 1rem;
+	width: 100%;
+	outline: none;
+	border-radius: 0.5rem;
+	border: 1px solid #999;
+}
+
+.placeholder {
+	position: absolute;
+	top: 17px;
+	left: 12px;
+	font-size: 1rem;
+	padding: 0 5px;
+	color: #999;
+	transition: 0.2s ease;
+	pointer-events: none;
+}
+
+.input-field:focus + .placeholder,
+.placeholder.floating {
+	top: -8px;
+	color: #333;
+	font-size: 0.8rem;
+	background-color: #fff;
+}
+
+.radio-group {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.radio-group-label {
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+.radio-btns {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.radio {
+	display: none;
+}
+
+.radio-label {
+	background-color: #495e57;
+	color: #fff;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.radio:checked + .radio-label {
+	background-color: #f4ce14;
+	color: #333;
+}
+
+.error {
+	display: block;
+	font-size: 0.8rem;
+	color: #f2611e;
+}
+
+.submit-btn {
+	align-self: flex-end;
+	padding: 0.5rem 1.5rem;
+	border-radius: 1.25rem;
+	border: none;
+	background-color: #f4ce14;
+	font-weight: 700;
+	font-family: karla;
+}
+
+.submit-btn:hover {
+	background-color: #495e57;
+	color: #fff;
+}
+
+.submit-btn:active {
+	background-color: #333;
+}
