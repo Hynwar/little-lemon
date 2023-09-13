@@ -22,7 +22,7 @@ const specials = [
 		image: bruschetta,
 		price: '4.20',
 		description:
-			'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil, sure to bring you joy',
+			'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.',
 	},
 ];
 

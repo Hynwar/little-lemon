@@ -1,5 +1,7 @@
 /* ##### HERO STYLES ##### */
 
+/* TODO: media-query to center all elements on smaller screens */
+
 #hero-section {
 	background-color: var(--primary);
 	padding: 3.75rem 2rem;
@@ -10,30 +12,38 @@
 	display: flex;
 	margin: 0 auto;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .hero-content {
-	max-width: 25rem;
-	margin-right: 5rem;
+	flex: 1;
+	/* max-width: 25rem; */
+	max-width: clamp(20rem, 50%, 25rem);
+	/* margin-right: 5rem; */
+	margin-right: clamp(2rem, 10%, 5rem);
 	justify-self: flex-start;
 }
 
 .description-text {
-	font-size: 1.2rem;
+	/* font-size: 1.2rem; */
+	font-size: clamp(1rem, 1.5vw, 1.2rem);
 	font-weight: 400;
 	color: #cacaca;
 	line-height: 2rem;
-	margin-bottom: 2rem;
+	/* margin-bottom: 2rem; */
+	margin-bottom: clamp(1rem, 3vw, 2rem);
 }
 
 .primary-btn {
-	padding: 0.8rem 1.2rem;
+	/* padding: 0.8rem 1.2rem; */
 	background-color: var(--accent);
 	border: 3px solid var(--accent);
 	border-radius: 6rem;
-	font-size: 1rem;
+	/* font-size: 1rem; */
 	font-weight: 700;
 	transition: 0.1s;
+	padding: clamp(0.5rem, 1vw, 0.8rem) clamp(1rem, 2vw, 1.2rem); /* Responsive padding */
+	font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .primary-btn:hover {
@@ -49,7 +59,8 @@
 
 .hero-img {
 	width: 100%;
-	max-width: 32rem;
+	max-width: clamp(15rem, 50%, 35rem);
+	height: auto;
 	object-fit: cover;
 	border-radius: 1.25rem;
 	margin-bottom: -10rem;
@@ -84,17 +95,18 @@
 
 .special-card {
 	background-color: var(--grey);
-	max-width: 33.33%;
+	flex: 0 0 calc(33.33% - 1.25rem);
 	border-radius: 1.25rem 1.25rem 0.625rem 0.625rem;
 	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+	position: relative;
 }
 
 .special-content {
-	padding: 2rem;
+	padding: clamp(1.5rem, 1vw, 2rem);
 }
 
 .special-price {
-	font-size: 1rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
 	font-weight: 800;
 	color: var(--secondary);
 }
@@ -108,21 +120,24 @@
 
 .special-description {
 	color: var(--primary);
-	font-size: 1rem;
+	font-size: clamp(0.8rem, 1.5vw, 1rem);
 	font-weight: 400;
 	line-height: 1.75rem;
-	margin-bottom: 3.5rem;
+	margin-bottom: 5rem;
 }
 
 .special-btn {
 	background-color: var(--primary);
 	border: none;
 	border-radius: 1.25rem;
-	padding: 0.5rem 1.2rem;
 	color: var(--grey);
-	font-size: 0.8rem;
 	font-weight: 700;
 	transition: 0.1s;
+	position: absolute;
+	bottom: 1.5rem;
+
+	padding: clamp(0.3rem, 0.8vw, 0.5rem) clamp(1rem, 1vw, 1.2rem);
+	font-size: clamp(0.6rem, 1vw, 0.8rem);
 }
 
 .special-btn:hover {
@@ -153,23 +168,23 @@
 	text-align: center;
 }
 
-.testimonials {
-	gap: 1.25rem;
+#testimonial-section .container {
+	flex-wrap: nowrap;
 }
 
 .review-card {
 	background-color: #fff;
 	border-radius: 1.25rem;
 	margin-top: 3.5rem;
-	padding: 1.8rem;
-	width: 44%;
+	padding: clamp(0.8rem, 1vw, 1.4rem);
+	flex: 0 0 calc(25% - 1.25rem);
 }
 
 .review-header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 1rem;
+	gap: clamp(0.6rem, 1vw, 1rem);
 }
 
 .review-title {
@@ -183,20 +198,21 @@
 	margin-top: 1rem;
 	color: var(--primary);
 	line-height: 1.5rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .avatar {
-	max-width: 5rem;
+	max-width: clamp(3rem, 40%, 4rem);
+}
+
+.stars {
+	max-width: clamp(2rem, 100%, 5rem);
 }
 
 /* ##### ABOUT STYLES ##### */
 
 #about-section {
 	padding: 8.75rem 2rem;
-}
-
-#about-section .container {
-	gap: 6rem;
 }
 
 #about-section h1 {
@@ -207,10 +223,24 @@
 	color: var(--secondary);
 }
 
+#about-section .container {
+	align-items: center;
+}
+
 .about-description {
 	color: #808e89;
-	font-size: 1rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
 	font-weight: 500;
 	line-height: 1.8rem;
-	max-width: 25rem;
+}
+
+.about-content {
+	max-width: clamp(16rem, 40%, 25rem);
+}
+
+.about-img {
+	width: 100%;
+	max-width: clamp(15rem, 55%, 35rem);
+	height: auto;
+	max-height: 40rem;
 }

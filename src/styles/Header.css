@@ -1,9 +1,9 @@
 .navbar {
-	padding: 1.5rem 2rem;
+	padding: 1rem 2rem;
 }
 
 #nav-logo {
-	max-width: 16rem;
+	max-width: max(12rem, 20%);
 	height: auto;
 	margin-right: 2rem;
 	flex: 1 1 auto;
@@ -12,14 +12,14 @@
 .nav-links {
 	display: flex;
 	list-style-type: none;
-	width: 40rem;
+	max-width: 40rem;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .nav-link {
 	text-decoration: none;
-	font-size: 1.25rem;
+	font-size: clamp(0.8rem, 1.5vw, 1.2rem);
 	font-weight: 700;
 	color: var(--primary);
 	transition: 0.1s;

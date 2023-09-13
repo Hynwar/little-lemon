@@ -26,18 +26,18 @@ h4 {
 }
 
 h1 {
-	font-size: 4.6rem;
+	font-size: clamp(3rem, 6vw, 4.6rem);
 	font-weight: 400;
 	color: var(--accent);
 }
 
 h2 {
-	font-size: 3.2rem;
+	font-size: clamp(2rem, 4.5vw, 3.2rem);
 	font-weight: 500;
 }
 
 h3 {
-	font-size: 2.25rem;
+	font-size: clamp(1.5rem, 3vw, 2.25rem);
 	font-weight: 500;
 	color: var(--grey);
 	margin-top: -1.2rem;
@@ -45,13 +45,13 @@ h3 {
 }
 
 h4 {
-	font-size: 2rem;
+	font-size: clamp(1.5rem, 2vw, 2rem);
 	color: var(--primary);
 	font-weight: 600;
 }
 
 h5 {
-	font-size: 1rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
 	font-weight: 700;
-	line-height: 1.5rem;
+	/* line-height: 1.5rem; */
 }

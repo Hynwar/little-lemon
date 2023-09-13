@@ -4,8 +4,18 @@
 	padding: 4rem 2rem 2rem;
 }
 
+.footer-logo {
+	width: 100%;
+	height: auto;
+}
+
+.logo-col {
+	flex: 1;
+	max-width: calc(28% - 2rem); /* Adjust width based on screen size */
+}
+
 .copyright {
-	font-size: 0.75rem;
+	font-size: clamp(0.5rem, 1vw, 0.75rem);
 	margin-top: 5rem;
 }
 
@@ -24,6 +34,7 @@
 	cursor: pointer;
 	color: #999;
 	line-height: 1.75rem;
+	font-size: clamp(0.8rem, 1.5vw, 1rem);
 	transition: 0.1s;
 }
 
@@ -42,6 +53,6 @@
 }
 
 .social-icon {
-	height: 2rem;
+	font-size: clamp(1rem, 1.5vw, 1.5rem);
 	color: #fff;
 }

@@ -12,13 +12,6 @@ function Navbar() {
 					<img id='nav-logo' src={logo} alt='Little Lemon Logo' />
 					<ul className='nav-links'>
 						<li>
-							{/* <ScrollLink
-								className='nav-link'
-								offset={-100}
-								smooth={true}
-								to='hero-section'>
-								Home
-							</ScrollLink> */}
 							<Link to='/' className='nav-link'>
 								Home
 							</Link>

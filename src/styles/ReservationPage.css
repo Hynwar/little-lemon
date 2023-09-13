@@ -1,5 +1,4 @@
 #reservation-section {
-	height: 54rem;
 	position: relative;
 	padding: 0 2rem;
 }
@@ -9,14 +8,14 @@
 }
 
 #reservation-section h1 {
-	font-size: 6rem;
-	line-height: 6rem;
+	font-size: clamp(4rem, 6vw, 6rem);
+	line-height: clamp(4rem, 6vw, 6rem);
 }
 
 #reservation-section h4 {
 	color: white;
 	font-family: Karla, sans-serif;
-	font-size: 1.5rem;
+	font-size: clamp(1.2rem, 2vw, 1.5rem);
 	font-weight: 800;
 	margin-top: 1.5rem;
 	margin-bottom: 0.75rem;
@@ -25,7 +24,7 @@
 #reservation-section h5 {
 	color: white;
 	font-family: Karla, sans-serif;
-	font-size: 1rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
 	font-weight: 700;
 	line-height: 2rem;
 	margin-bottom: 0.4rem;
@@ -34,14 +33,15 @@
 
 .reservation-info {
 	background: none;
+	flex: 1;
 	padding: 5rem 0;
-	max-width: 28rem;
+	max-width: 50%;
 }
 
 .opening-info {
 	color: white;
-	font-size: 1.25rem;
-	line-height: 2rem;
+	font-size: clamp(0.8rem, 1vw, 1.25rem);
+	line-height: clamp(1.2rem, 1vw, 2rem);
 }
 
 .background-img {
@@ -56,14 +56,14 @@
 .policies {
 	color: white;
 	margin-left: 2rem;
-	font-size: 0.8rem;
-	line-height: 1.5rem;
+	font-size: clamp(0.6rem, 1vw, 0.8rem);
+	line-height: clamp(1.2rem, 1vw, 1.5rem);
 }
 
 .reservation-content {
 	padding: 5rem 0;
-	width: 100%;
-	max-width: 30rem;
+	max-width: calc(70% - 2rem);
+	flex: 1;
 	margin: 0 auto;
 }
 
@@ -79,9 +79,9 @@
 }
 
 .input-field {
-	padding: 1rem;
+	padding: clamp(0.8rem, 1vw, 1rem);
 	font-family: inherit;
-	font-size: 1rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
 	width: 100%;
 	outline: none;
 	border-radius: 0.5rem;
@@ -90,10 +90,10 @@
 
 .placeholder {
 	position: absolute;
-	top: 17px;
-	left: 12px;
-	font-size: 1rem;
-	padding: 0 5px;
+	top: 1rem;
+	left: 0.75rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
+	padding: 0 0.3rem;
 	color: #999;
 	transition: 0.2s ease;
 	pointer-events: none;
@@ -103,7 +103,7 @@
 .placeholder.floating {
 	top: -8px;
 	color: #333;
-	font-size: 0.8rem;
+	font-size: clamp(0.6rem, 1vw, 0.8rem);
 	background-color: #fff;
 }
 
@@ -175,32 +175,32 @@
 
 .confirmation-page h2 {
 	color: #495e57;
-	font-size: 2.5rem;
+	font-size: clamp(2rem, 2vw, 2.5rem);
 	font-weight: 500;
-	line-height: 6rem;
+	line-height: clamp(3rem, 2vw, 6rem);
 }
 
 .confirmed-msg {
-	font-size: 1.25rem;
+	font-size: clamp(1rem, 1vw, 1.25rem);
 	font-weight: 500;
 	line-height: 2rem;
 }
 
 .details-title {
-	font-size: 1.25rem;
+	font-size: clamp(1rem, 1vw, 1.25rem);
 	font-weight: 700;
-	line-height: 2rem;
+	line-height: clamp(1rem, 1vw, 2rem);
 	margin-top: 3rem;
 	margin-bottom: 1.2rem;
 }
 
 .confirmed-details {
-	font-size: 1rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
 	font-weight: 500;
 	line-height: 2rem;
 }
 
 .confirm {
-	font-size: 1.2rem;
+	font-size: clamp(0.8rem, 1vw, 1.2rem);
 	margin-top: 5rem;
 }
