@@ -1,9 +1,10 @@
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react';
 
 import '../../styles/ReservationPage.css';
 import ReservationForm from './ReservationForm';
 import image from '../../assets/reservation.png';
 import { fetchAPI, submitAPI } from '../../utils/fakeAPI';
+import Confirmation from './Confirmation';
 
 function updateTimes(state, action) {
 	if (action.type === 'UPDATE_TIMES') {
@@ -19,10 +20,24 @@ function initializeTimes() {
 
 function ReservationPage() {
 	const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
-	const handleDateChange = (newDate) => {
+	const [confirmed, setConfirmed] = useState(false);
+	const [formData, setFormData] = useState();
+
+	function handleDateChange(newDate) {
 		dispatch({ type: 'UPDATE_TIMES', date: newDate });
-		console.log('Date changed');
-	};
+	}
+
+	function submitData(formData) {
+		const res = submitAPI(formData);
+		if (res) {
+			setFormData(formData);
+			setConfirmed(true);
+		}
+	}
+
+	function confirmData() {
+		setConfirmed(false);
+	}
 
 	return (
 		<section id='reservation-section'>
@@ -55,10 +70,17 @@ function ReservationPage() {
 						</li>
 					</ul>
 				</div>
-				<ReservationForm
-					availableTimes={availableTimes}
-					handleDateChange={handleDateChange}
-				/>
+				<div className='reservation-content'>
+					{confirmed ? (
+						<Confirmation formData={formData} confirmData={confirmData} />
+					) : (
+						<ReservationForm
+							availableTimes={availableTimes}
+							handleDateChange={handleDateChange}
+							submitData={submitData}
+						/>
+					)}
+				</div>
 			</div>
 		</section>
 	);

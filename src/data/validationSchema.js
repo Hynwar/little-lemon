@@ -1,17 +1,6 @@
 import * as Yup from 'yup';
 
 const today = new Date();
-const currentDay = today.getDay();
-
-const openHoursWeekdays = {
-	start: 8,
-	end: 22, // 10 PM
-};
-
-const openHoursWeekends = {
-	start: 9,
-	end: 12, // 12 PM
-};
 
 export const validationSchema = Yup.object().shape({
 	date: Yup.date()

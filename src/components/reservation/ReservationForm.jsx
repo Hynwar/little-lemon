@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import validationSchema from '../../data/validationSchema';
 import { useState } from 'react';
 
-function ReservationForm({ availableTimes, handleDateChange }) {
+function ReservationForm({ availableTimes, handleDateChange, submitData }) {
 	const {
 		register,
 		handleSubmit,
@@ -23,8 +23,9 @@ function ReservationForm({ availableTimes, handleDateChange }) {
 	const phoneValue = watch('phone', '');
 	const commentsValue = watch('comments', '');
 
-	const onSubmit = (e) => {
-		console.log(e);
+	const onSubmit = (data) => {
+		submitData(data);
+		console.log(data);
 	};
 
 	return (
@@ -159,12 +160,7 @@ function ReservationForm({ availableTimes, handleDateChange }) {
 			</div>
 
 			<div className='input-group'>
-				<input
-					className='input-field'
-					onBlur={() => console.log('OnBlur event')}
-					type='text'
-					{...register('fullName')}
-				/>
+				<input className='input-field' type='text' {...register('fullName')} />
 				<label className={`placeholder ${fullNameValue ? 'floating' : ''}`}>
 					Full Name
 				</label>
@@ -199,7 +195,7 @@ function ReservationForm({ availableTimes, handleDateChange }) {
 				)}
 			</div>
 
-			<button type='submit' className='submit-btn'>
+			<button type='submit' className='reservation-btn submit'>
 				Submit
 			</button>
 		</form>
