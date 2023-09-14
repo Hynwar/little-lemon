@@ -1,0 +1,62 @@
+#testimonial-section {
+	background-color: var(--primary);
+	padding: 6rem 2rem;
+}
+
+#testimonial-section h2 {
+	color: var(--grey);
+	text-align: center;
+}
+
+.review-card {
+	background-color: #fff;
+	border-radius: 1.25rem;
+	margin-top: 3.5rem;
+	padding: clamp(0.8rem, 1vw, 1.4rem);
+	flex: 0 0 calc(25% - 1.25rem);
+}
+
+.review-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: clamp(0.6rem, 1vw, 1rem);
+}
+
+.review-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.review-text {
+	text-align: center;
+	margin-top: 1rem;
+	color: var(--primary);
+	line-height: 1.5rem;
+	font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.avatar {
+	max-width: clamp(3rem, 40%, 4rem);
+}
+
+.stars {
+	max-width: clamp(2rem, 100%, 5rem);
+}
+
+@media screen and (max-width: 768px) {
+	#testimonial-section .container {
+		flex-wrap: wrap;
+	}
+
+	.review-card {
+		flex: 0 0 calc(50% - 1rem); /* Display 1 card in a row on screens <= 568px */
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.review-card {
+		flex: 0 0 calc(100% - 1rem); /* Display 1 card in a row on screens <= 568px */
+	}
+}

@@ -1,4 +1,5 @@
 import heroImg from '../../assets/hero-img.jpg';
+import '../../styles/Hero.css';
 
 function Hero() {
 	return (

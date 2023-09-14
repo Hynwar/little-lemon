@@ -1,22 +1,27 @@
 .footer {
 	background-color: var(--dark-grey);
 	color: #999;
-	padding: 4rem 2rem 2rem;
+	padding: 4rem 2rem 4rem;
+	position: relative;
 }
 
 .footer-logo {
 	width: 100%;
 	height: auto;
+	min-width: 10rem;
+	max-width: 12rem;
 }
 
 .logo-col {
 	flex: 1;
-	max-width: calc(28% - 2rem); /* Adjust width based on screen size */
+	max-width: calc(28% - 2rem);
 }
 
 .copyright {
 	font-size: clamp(0.5rem, 1vw, 0.75rem);
-	margin-top: 5rem;
+	position: absolute;
+	right: 2rem;
+	bottom: 2rem;
 }
 
 .footer h5 {
@@ -55,4 +60,36 @@
 .social-icon {
 	font-size: clamp(1rem, 1.5vw, 1.5rem);
 	color: #fff;
+}
+
+@media screen and (max-width: 686px) {
+	.footer .container {
+		flex-wrap: wrap;
+		justify-content: none;
+		gap: 2rem;
+	}
+
+	.logo-col,
+	.contact-col {
+		flex: 2;
+		max-width: calc(33% - 1rem);
+	}
+
+	.contact-icon {
+		margin-right: 0.3rem;
+	}
+}
+
+@media screen and (max-width: 586px) {
+	.logo-col,
+	.contact-col {
+		flex: 2;
+		max-width: calc(80% - 1rem);
+	}
+
+	.social-col,
+	.navigation-col {
+		flex: 1;
+		max-width: calc(50% - 1rem);
+	}
 }

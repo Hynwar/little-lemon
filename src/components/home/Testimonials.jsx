@@ -1,5 +1,6 @@
 import ReviewCard from './ReviewCard';
 import reviews from '../../data/reviewData';
+import '../../styles/Testimonials.css';
 
 function Testimonials() {
 	return (

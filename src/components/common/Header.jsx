@@ -10,6 +10,7 @@ function Navbar() {
 			<nav className='navbar'>
 				<div className='container'>
 					<img id='nav-logo' src={logo} alt='Little Lemon Logo' />
+
 					<ul className='nav-links'>
 						<li>
 							<Link to='/' className='nav-link'>
@@ -38,12 +39,6 @@ function Navbar() {
 							<Link to='/reservations' className='nav-link'>
 								Reservations
 							</Link>
-						</li>
-						<li>
-							<a className='nav-link'>Order Online</a>
-						</li>
-						<li>
-							<a className='nav-link'>Login</a>
 						</li>
 					</ul>
 				</div>

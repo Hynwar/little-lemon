@@ -1,0 +1,136 @@
+#menu-section {
+	padding: 12rem 2rem;
+}
+
+#menu-section .primary-btn {
+	align-self: center;
+	border: none;
+}
+
+#menu-section .primary-btn:hover {
+	color: var(--grey);
+	background-color: var(--primary);
+}
+
+#menu-section .primary-btn:active {
+	color: var(--grey);
+	background-color: var(--dark-grey);
+}
+
+.menu-cards {
+	margin-top: 3.75rem;
+	gap: 1.25rem;
+}
+
+.special-card {
+	background-color: var(--grey);
+	flex: 0 0 calc(33.33% - 1.25rem);
+	border-radius: 1.25rem 1.25rem 0.625rem 0.625rem;
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+	position: relative;
+}
+
+.special-content {
+	padding: clamp(1.5rem, 1vw, 2rem);
+}
+
+.special-price {
+	font-size: clamp(0.8rem, 1vw, 1rem);
+	font-weight: 800;
+	color: var(--secondary);
+}
+
+.special-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.25rem;
+}
+
+.special-description {
+	color: var(--primary);
+	font-size: clamp(0.8rem, 1.5vw, 1rem);
+	font-weight: 400;
+	line-height: 1.75rem;
+	margin-bottom: 5rem;
+}
+
+.special-btn {
+	background-color: var(--primary);
+	border: none;
+	border-radius: 1.25rem;
+	color: var(--grey);
+	font-weight: 700;
+	transition: 0.1s;
+	position: absolute;
+	bottom: 1.5rem;
+
+	padding: clamp(0.3rem, 0.8vw, 0.5rem) clamp(1rem, 1vw, 1.2rem);
+	font-size: clamp(0.6rem, 1vw, 0.8rem);
+}
+
+.special-btn:hover {
+	background-color: var(--accent);
+	color: var(--dark-grey);
+}
+
+.special-btn:active {
+	background-color: var(--dark-grey);
+	color: var(--grey);
+}
+
+.special-image {
+	width: 100%;
+	max-height: 14rem;
+	border-radius: 1.25rem 1.25rem 0 0;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+	#menu-section {
+		padding-bottom: 5rem;
+	}
+
+	.menu-cards {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.special-card {
+		flex: 1 1 auto;
+		max-width: 60%;
+		margin-bottom: 1rem;
+		border-radius: 1.25rem;
+	}
+
+	.special-content {
+		padding: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.special-header {
+		margin-bottom: 0.5rem;
+	}
+
+	.special-price {
+		font-size: 0.9rem;
+	}
+
+	.special-description {
+		font-size: 0.9rem;
+		margin-bottom: 2rem;
+	}
+
+	.special-btn {
+		font-size: 0.8rem;
+		font-weight: 500;
+		padding: 0.3rem 0.5rem;
+	}
+}
+
+@media screen and (max-width: 586px) {
+	.special-card {
+		max-width: 80%;
+	}
+}

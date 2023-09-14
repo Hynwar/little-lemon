@@ -30,7 +30,6 @@ function Footer() {
 			<div className='container'>
 				<div className='logo-col'>
 					<img src={logo} alt='' className='footer-logo' />
-					<p className='copyright'>Copyright &copy; Little Lemon 2023</p>
 				</div>
 				<div className='navigation-col'>
 					<h5>Navigation</h5>
@@ -61,16 +60,6 @@ function Footer() {
 						<li>
 							<a className='footer-link' href=''>
 								Reservations
-							</a>
-						</li>
-						<li>
-							<a className='footer-link' href=''>
-								Order Online
-							</a>
-						</li>
-						<li>
-							<a className='footer-link' href=''>
-								Login
 							</a>
 						</li>
 					</ul>
@@ -113,6 +102,7 @@ function Footer() {
 						</a>
 					</div>
 				</div>
+				<p className='copyright'>Copyright &copy; Little Lemon 2023</p>
 			</div>
 		</footer>
 	);

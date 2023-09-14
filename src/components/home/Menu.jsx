@@ -1,5 +1,6 @@
 import SpecialCard from './SpecialCard';
 import specials from '../../data/specialsData';
+import '../../styles/Menu.css';
 
 function Menu() {
 	return (
