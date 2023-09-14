@@ -1,5 +1,6 @@
 .navbar {
 	padding: 1rem 2rem;
+	position: relative;
 }
 
 #nav-logo {
@@ -35,4 +36,31 @@
 .nav-link:active {
 	color: var(--grey);
 	background-color: var(--dark-grey);
+}
+
+.mobile-nav-btn {
+	display: none;
+}
+
+@media screen and (max-width: 620px) {
+	.nav-links {
+		flex-direction: column;
+		position: absolute;
+		top: 5rem;
+		left: -100%;
+		background-color: white;
+		width: 100%;
+		transition: left 0.3s ease-in-out;
+	}
+
+	.nav-links.open {
+		left: 0;
+	}
+
+	.mobile-nav-btn {
+		display: block;
+		border: none;
+		background: none;
+		font-size: 2rem;
+	}
 }

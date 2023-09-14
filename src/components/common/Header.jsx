@@ -3,15 +3,25 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../assets/Logo.svg';
 import '../../styles/Header.css';
+import { useState } from 'react';
 
 function Navbar() {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsOpen((open) => !open);
+	};
+
 	return (
 		<header>
 			<nav className='navbar'>
 				<div className='container'>
 					<img id='nav-logo' src={logo} alt='Little Lemon Logo' />
 
-					<ul className='nav-links'>
+					<button className='mobile-nav-btn' onClick={toggleMenu}>
+						&#9776;
+					</button>
+					<ul className={`nav-links ${isOpen ? 'open' : ''}`}>
 						<li>
 							<Link to='/' className='nav-link'>
 								Home
