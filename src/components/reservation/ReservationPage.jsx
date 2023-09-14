@@ -3,20 +3,9 @@ import { useReducer, useState } from 'react';
 import '../../styles/ReservationPage.css';
 import ReservationForm from './ReservationForm';
 import image from '../../assets/reservation.png';
-import { fetchAPI, submitAPI } from '../../utils/fakeAPI';
+import { submitAPI } from '../../utils/fakeAPI';
 import Confirmation from './Confirmation';
-
-function updateTimes(state, action) {
-	if (action.type === 'UPDATE_TIMES') {
-		const res = fetchAPI(new Date(action.date));
-		return res.length !== 0 ? res : state;
-	}
-	return state;
-}
-
-function initializeTimes() {
-	return fetchAPI(new Date());
-}
+import { initializeTimes, updateTimes } from '../../utils/times';
 
 function ReservationPage() {
 	const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());

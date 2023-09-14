@@ -41,7 +41,7 @@
 .opening-info {
 	color: white;
 	font-size: clamp(0.8rem, 1vw, 1.25rem);
-	line-height: clamp(1.2rem, 1vw, 2rem);
+	line-height: clamp(1.2rem, 1.5vw, 2.5rem);
 }
 
 .background-img {
@@ -57,7 +57,7 @@
 	color: white;
 	margin-left: 2rem;
 	font-size: clamp(0.6rem, 1vw, 0.8rem);
-	line-height: clamp(1.2rem, 1vw, 1.5rem);
+	line-height: clamp(1.2rem, 1.5vw, 1.5rem);
 }
 
 .reservation-content {

@@ -15,12 +15,12 @@ export const validationSchema = Yup.object().shape({
 	time: Yup.string().required('Time is required'),
 	occassion: Yup.string().required('Occassion is required'),
 	fullName: Yup.string()
+		.required('Full name is required')
 		.matches(/^[A-Za-z -]+$/i, 'Invalid full name format')
-		.min(3, 'Full name should be at least 3 characters')
-		.required('Full name is required'),
+		.min(3, 'Full name should be at least 3 characters'),
 	email: Yup.string()
-		.email('Invalid email format')
-		.required('Email is required'),
+		.required('Email is required')
+		.email('Invalid email format'),
 	phone: Yup.number('Invalid phone number')
 		.transform((value, originalValue) => {
 			if (originalValue === '') {

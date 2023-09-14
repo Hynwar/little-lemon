@@ -32,6 +32,7 @@ function ReservationForm({ availableTimes, handleDateChange, submitData }) {
 		<form className='reservation-form' onSubmit={handleSubmit(onSubmit)}>
 			<div className='input-group'>
 				<input
+					id='date'
 					className='input-field'
 					type={inputType}
 					onFocus={() => setInputType('date')}
@@ -45,14 +46,20 @@ function ReservationForm({ availableTimes, handleDateChange, submitData }) {
 						},
 					})}
 				/>
-				<label className={`placeholder ${dateValue ? 'floating' : ''}`}>
+				<label
+					htmlFor='date'
+					className={`placeholder ${dateValue ? 'floating' : ''}`}>
 					Select a Date
 				</label>
 				{errors.date && <span className='error'>{errors.date.message}</span>}
 			</div>
 
 			<div className='input-group'>
-				<select className='input-field' value={timeValue} {...register('time')}>
+				<select
+					id='time'
+					className='input-field'
+					value={timeValue}
+					{...register('time')}>
 					<option value='' hidden></option>
 					{availableTimes.map((time) => (
 						<option key={time} value={time}>
@@ -61,7 +68,9 @@ function ReservationForm({ availableTimes, handleDateChange, submitData }) {
 					))}
 				</select>
 
-				<label className={`placeholder ${timeValue ? 'floating' : ''}`}>
+				<label
+					htmlFor='time'
+					className={`placeholder ${timeValue ? 'floating' : ''}`}>
 					Select a Time
 				</label>
 				{errors.time && <span className='error'>{errors.time.message}</span>}
@@ -142,6 +151,7 @@ function ReservationForm({ availableTimes, handleDateChange, submitData }) {
 
 			<div className='input-group'>
 				<select
+					id='occassion'
 					className='input-field'
 					value={occassionValue}
 					{...register('occassion')}>
@@ -151,7 +161,9 @@ function ReservationForm({ availableTimes, handleDateChange, submitData }) {
 					<option value='Anniversary'>Anniversary</option>
 				</select>
 
-				<label className={`placeholder ${occassionValue ? 'floating' : ''}`}>
+				<label
+					htmlFor='occassion'
+					className={`placeholder ${occassionValue ? 'floating' : ''}`}>
 					Select an Occassion
 				</label>
 				{errors.occassion && (
@@ -160,8 +172,15 @@ function ReservationForm({ availableTimes, handleDateChange, submitData }) {
 			</div>
 
 			<div className='input-group'>
-				<input className='input-field' type='text' {...register('fullName')} />
-				<label className={`placeholder ${fullNameValue ? 'floating' : ''}`}>
+				<input
+					id='fullName'
+					className='input-field'
+					type='text'
+					{...register('fullName')}
+				/>
+				<label
+					htmlFor='fullName'
+					className={`placeholder ${fullNameValue ? 'floating' : ''}`}>
 					Full Name
 				</label>
 				{errors.fullName && (
@@ -170,24 +189,44 @@ function ReservationForm({ availableTimes, handleDateChange, submitData }) {
 			</div>
 
 			<div className='input-group'>
-				<input className='input-field' type='email' {...register('email')} />
-				<label className={`placeholder ${emailValue ? 'floating' : ''}`}>
+				<input
+					id='email'
+					className='input-field'
+					type='email'
+					{...register('email')}
+				/>
+				<label
+					htmlFor='email'
+					className={`placeholder ${emailValue ? 'floating' : ''}`}>
 					Email Address
 				</label>
 				{errors.email && <span className='error'>{errors.email.message}</span>}
 			</div>
 
 			<div className='input-group'>
-				<input className='input-field' type='tel' {...register('phone')} />
-				<label className={`placeholder ${phoneValue ? 'floating' : ''}`}>
+				<input
+					id='phone'
+					className='input-field'
+					type='tel'
+					{...register('phone')}
+				/>
+				<label
+					htmlFor='phone'
+					className={`placeholder ${phoneValue ? 'floating' : ''}`}>
 					Phone Number
 				</label>
 				{errors.phone && <span className='error'>{errors.phone.message}</span>}
 			</div>
 
 			<div className='input-group'>
-				<textarea className='input-field' {...register('comments')} />
-				<label className={`placeholder ${commentsValue ? 'floating' : ''}`}>
+				<textarea
+					id='comments'
+					className='input-field'
+					{...register('comments')}
+				/>
+				<label
+					htmlFor='comments'
+					className={`placeholder ${commentsValue ? 'floating' : ''}`}>
 					Additional Comments
 				</label>
 				{errors.comments && (
