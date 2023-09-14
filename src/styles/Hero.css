@@ -34,6 +34,8 @@
 	transition: 0.1s;
 	padding: clamp(0.5rem, 1vw, 0.8rem) clamp(1rem, 2vw, 1.2rem); /* Responsive padding */
 	font-size: clamp(0.8rem, 1vw, 1rem);
+	text-decoration: none;
+	color: #333;
 }
 
 .primary-btn:hover {
